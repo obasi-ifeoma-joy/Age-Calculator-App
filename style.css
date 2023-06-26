@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300;1,700;1,800&display=swap');
+
+:root{
+    font-size: 62.5%;
+    --White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+--Purple: hsl(259, 100%, 65%);
+--Light-red: hsl(0, 100%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--Light-grey);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+/* smaller screens styling */
+
+.overall-container{
+    width: 90%;
+    max-width: 900px;
+    background-color: var(--White);
+    padding: 2em;
+    border-radius: 1rem 1rem 12vmax 2rem;
+}
+
+.container-one{
+    display: flex;
+    gap: 1em;
+    
+}
+
+
+
+.day,.months,.years{
+    color: var(--Smokey-grey);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+
+
+}
+
+
+
+input{
+    width: 100%;
+    margin: auto;
+    padding: 1em 2em 1em 1em;
+        border: 1px solid var(--Light-grey);
+        border-radius: 0.5rem;
+        font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--Off-black);
+            transition: 0.5s ease-in;
+}
+
+
+
+input:focus-visible,:focus-within{
+    outline: none;
+}
+
+input:hover{
+    border: 1px solid var(--Purple);
+    cursor: pointer;
+}
+
+button{
+    background-color: var(--Purple);
+    border: none;
+    border-radius: 100%;
+    width: 50px;
+    padding: 0.3em;
+    transform: translate(165px, -30px);
+    position: absolute;
+    transition: 0.5s ease-in;
+    z-index: 1;
+
+}
+
+
+button:hover{
+    background-color: var(--Off-black);
+}
+
+button > svg{
+width: 2rem;
+}
+
+hr{
+    background-color: var(--Light-grey);
+    position: relative;
+    margin-top: 2.4em;
+}
+
+.years-num,
+.months-num,
+.days-num{
+    color: var(--Purple);
+    font-size: 1.2em;
+    line-height: 0;
+
+}
+
+div.container{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 3.5rem;
+}
+
+strong{
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    color: var(--Off-black);
+}
+
+/* empty error message styling and general error message styling */
+.error-message{
+    color: var(--Light-red);
+    letter-spacing: 0;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.8rem;
+    
+}
+
+
+/* media queries for adding complexities on larger screens*/
+@media(min-width: 40em) {
+
+    .error-message {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+
+strong {
+    font-size: 4em;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+
+}
+
+}
+
+
+@media(min-width: 50em){
+
+    button>svg {
+            width: 3rem;
+        }
+button {
+    width: 65px;
+        padding: 0.5em;
+        transform: translate(640px, -30px);
+    }
+
+        input {
+            width: 90%;
+            font-size: 1.5rem;
+        }
+
+.day,
+.months,
+.years {
+  display: flex;
+flex-direction: column;
+}
+
+.day,
+.months,
+.years > span{
+    text-indent: 1.1rem;
+}
+
+.container-one {
+    display: flex;
+    gap: 0.5em;
+
+}
+
+
+
+strong {
+    font-size: 5em;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+
+}
+
+
+}
+
+@media(min-width: 70em) {
+    button {
+            width: 65px;
+            padding: 0.5em;
+            transform: translate(770px, -30px);
+        }
+        .error-message {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        hr{
+            margin-top: 1.7em;
+        }
+
+    input {
+        padding: 1em 0em 1em 1em;
+        font-size: 1.7rem;
+        
+    }
+
+    input::placeholder {
+        font-size: 3.2rem;
+        transform: translate(0, 5px);
+    }
+        .years-num,
+        .months-num,
+        .days-num {
+            color: var(--Purple);
+            font-size: 1em;
+            line-height: 0;
+    
+        }
+}

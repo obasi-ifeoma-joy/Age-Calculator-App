@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+<div class="overall-container">
+  <div class="input-fields">
+<div class="container-one">
+<div class="day">
+  <span id="day-error-text" class="error-red">DAY</span>
+  <input type="text" placeholder="DD" id="dayDob">
+  <span class="error-message  error-day"></span>
+</div>
+
+<div class="months">
+  <span id="months-error-text" class="error-red">MONTH</span>
+  <input type="text" placeholder="MM" id="monthDob">
+  <span class="error-message error-month"></span>
+</div>
+
+<div class="years">
+  <span id="years-error-text" class="error-red">YEAR</span>
+  <input type="text" placeholder=" YYYY" id="yearDob">
+  <span class="error-message error-year"></span>
+</div>
+    </div>
+  </div>
+  
+  
+  <hr>
+  <button type="submit" onclick="ageCalculator()"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+    <g fill="none" stroke="#FFF" stroke-width="3">
+      <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+    </g>
+  </svg> </button>
+
+  <!-- age strings -->
+
+  <div class="agestrings">
+    <div class="container">
+    <strong class="strings"> <span class="years-num">- -</span> years</strong>
+    <strong class="strings"><span class="months-num">- -</span> months</strong>
+    <strong class="strings"><span class="days-num">- -</span> days</strong>
+    </div>
+  </div>
+</div>
+</div>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
